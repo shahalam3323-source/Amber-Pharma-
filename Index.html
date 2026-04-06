@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ambaria – Premium Ayurvedic Supplements by Amber Pharma</title>
+    <meta name="description" content="Ayurvedic wellness products – Desire Testboost, Height More, Vascular, Active Desire Majoon. 100% natural, COD available.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefcf7;
+            color: #1e2a2e;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-green: #1e6f3f;
+            --primary-gold: #d4a017;
+            --dark-green: #0f442a;
+            --light-bg: #fafaf5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        .header {
+            background: linear-gradient(135deg, #1e6f3f 0%, #0f442a 100%);
+            color: white;
+            padding: 40px 0 30px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-gold);
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .header h1 span {
+            color: var(--primary-gold);
+        }
+        .trust-badge {
+            display: inline-flex;
+            background: rgba(255,255,255,0.15);
+            border-radius: 60px;
+            padding: 8px 20px;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* product grid */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 28px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transition: 0.25s;
+            border: 1px solid #eae2d7;
+            text-align: center;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary-gold);
+        }
+        .product-img {
+            width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+        }
+        .product-desc {
+            font-size: 0.85rem;
+            color: #4a5b4e;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin: 10px 0;
+        }
+        .old-price {
+            text-decoration: line-through;
+            font-size: 0.9rem;
+            color: #999;
+            margin-right: 8px;
+        }
+        .badge {
+            background: #e74c3c;
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+        .btn-wa:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+        }
+
+        /* combo offer banner */
+        .combo-banner {
+            background: linear-gradient(115deg, #0f442a, #1e6f3f);
+            border-radius: 30px;
+            padding: 35px 25px;
+            text-align: center;
+            color: white;
+            margin: 40px 0;
+        }
+        .combo-banner h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .combo-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+        }
+
+        /* benefits row */
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .benefit-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        .benefit-item i {
+            font-size: 2rem;
+            color: var(--primary-gold);
+            margin-bottom: 10px;
+        }
+
+        /* faq */
+        .faq-section {
+            background: var(--light-bg);
+            padding: 50px 0;
+            border-radius: 40px;
+            margin: 40px 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 18px;
+            margin-bottom: 15px;
+            padding: 18px 22px;
+            cursor: pointer;
+            border: 1px solid #e2d9ce;
+        }
+        .faq-question {
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 12px;
+            color: #4a5b4e;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #1e2a24;
+            color: #cfddce;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .product-card {
+                width: 100%;
+                max-width: 320px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <h1>HerbalWayLab <span>by Amber Pharma</span></h1>
+        <p style="margin: 10px 0 0; opacity: 0.9;">100% Ayurvedic | GMP Certified | Made in India</p>
+        <div class="trust-badge">
+            <span><i class="fas fa-leaf"></i> Natural Ingredients</span>
+            <span><i class="fas fa-flask"></i> Lab Tested</span>
+            <span><i class="fas fa-truck-fast"></i> Free Shipping</span>
+            <span><i class="fas fa-rupee-sign"></i> COD Available</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="section-title">🔥 Our Premium Range</h2>
+    <div class="product-grid">
+        <!-- Desire Testboost -->
+        <div class="product-card">
+            <div class="badge">BEST SELLER</div>
+            <img src="images/1000383832.png" alt="Desire Testboost" class="product-img">
+            <div class="product-title">Desire Testboost</div>
+            <div class="product-desc">Boosts stamina, lean muscle & workout recovery. 60 capsules – 500mg each.</div>
+            <div class="price"><span class="old-price">₹2499</span> ₹1499</div>
+            <a href="https://wa.me/917017209556?text=Hi%2C%20I%20want%20to%20order%20Desire%20Testboost%20(₹1499)%20with%20COD" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp (COD)</a>
+        </div>
+        <!-- Height More -->
+        <div class="product-card">
+            <div class="badge">GROWTH SUPPORT</div>
+            <img src="images/1000383833.png" alt="Height More" class="product-img">
+            <div class="product-title">Height More</div>
+            <div class="product-desc">Maximise height potential, bone density, muscle & joint support. 60 caps.</div>
+            <div class="price"><span class="old-price">₹2299</span> ₹1399</div>
+            <a href="https://wa.me/917017209556?text=Hi%2C%20I%20want%20to%20order%20Height%20More%20(₹1399)%20with%20COD" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp (COD)</a>
+        </div>
+        <!-- Vascular -->
+        <div class="product-card">
+            <div class="badge">HEART & ENERGY</div>
+            <img src="images/1000383834.png" alt="Vascular" class="product-img">
+            <div class="product-title">Vascular</div>
+            <div class="product-desc">Improve heart health, vascular system, immunity & exercise performance. 60 caps.</div>
+            <div class="price"><span class="old-price">₹2399</span> ₹1499</div>
+            <a href="https://wa.me/917017209556?text=Hi%2C%20I%20want%20to%20order%20Vascular%20(₹1499)%20with%20COD" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp (COD)</a>
+        </div>
+        <!-- Active Desire Majoon -->
+        <div class="product-card">
+            <div class="badge">CLASSIC FORMULA</div>
+            <img src="images/1000383835.png" alt="Active Desire Majoon" class="product-img">
+            <div class="product-title">Active Desire Majoon</div>
+            <div class="product-desc">Herbal jam formulation for vitality & stamina. Net Wt. 300gm.</div>
+            <div class="price"><span class="old-price">₹1899</span> ₹1099</div>
+            <a href="https://wa.me/917017209556?text=Hi%2C%20I%20want%20to%20order%20Active%20Desire%20Majoon%20(₹1099)%20with%20COD" class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Order on WhatsApp (COD)</a>
+        </div>
+    </div>
+
+    <!-- COMBO OFFER (ALL 4 PRODUCTS) -->
+    <div class="combo-banner">
+        <h3>⚡ Ultimate Wellness Bundle ⚡</h3>
+        <p style="margin: 12px 0;">Get all 4 products – Desire Testboost + Height More + Vascular + Active Desire Majoon</p>
+        <div><span class="combo-price">₹5499</span> <span style="text-decoration: line-through; opacity:0.8;">₹9096</span> <span style="background:#d4a017; color:#0f442a; padding:5px 12px; border-radius:30px; margin-left:10px;">SAVE 40%</span></div>
+        <a href="https://wa.me/917017209556?text=Hi%2C%20I%20want%20to%20order%20the%20FULL%20BUNDLE%20(all%204%20products)%20for%20₹5499%20with%20COD" class="btn-wa" style="background: #d4a017; color:#0f442a; margin-top: 20px; width: auto; display: inline-flex;"><i class="fab fa-whatsapp"></i> Order Full Bundle (COD)</a>
+    </div>
+
+    <!-- BENEFITS / WHY US -->
+    <div class="benefits">
+        <div class="benefit-item"><i class="fas fa-seedling"></i><h4>100% Natural</h4><p>No chemicals, no side effects</p></div>
+        <div class="benefit-item"><i class="fas fa-trophy"></i><h4>GMP Certified</h4><p>Made in WHO‑GMP facility</p></div>
+        <div class="benefit-item"><i class="fas fa-undo-alt"></i><h4>7‑Day Return</h4><p>Easy return policy</p></div>
+        <div class="benefit-item"><i class="fas fa-box-open"></i><h4>Discreet Packaging</h4><p>Plain box, no label</p></div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+        <h2 class="section-title" style="margin-top:0;">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item"><div class="faq-question">Are these products safe? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, all products are 100% herbal, GMP certified, and have no known side effects. However, consult your doctor if you have a medical condition.</div></div>
+            <div class="faq-item"><div class="faq-question">Is COD available? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, Cash on Delivery is available across India.</div></div>
+            <div class="faq-item"><div class="faq-question">How long does shipping take? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">3-7 business days. Tracking details will be shared on WhatsApp.</div></div>
+            <div class="faq-item"><div class="faq-question">Can I return the product? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We offer a 7‑day return policy for unused and sealed products. Contact us on WhatsApp for returns.</div></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2025 HerbalWayLab by Amber Pharma – India’s Trusted Ayurvedic Brand</p>
+        <p style="margin-top: 12px; font-size: 0.7rem;">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        <p style="margin-top: 8px;"><i class="fab fa-whatsapp"></i> Order / Support: +91 70172 09556</p>
+    </div>
+</footer>
+
+<script>
+    // FAQ toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const questionDiv = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        questionDiv.addEventListener('click', () => {
+            const isOpen = answer.style.display === 'block';
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+            document.querySelectorAll('.faq-question i').forEach(icon => icon.className = 'fas fa-chevron-down');
+            if (!isOpen) {
+                answer.style.display = 'block';
+                questionDiv.querySelector('i').className = 'fas fa-chevron-up';
+            }
+        });
+    });
+</script>
+</body>
+              </html>
